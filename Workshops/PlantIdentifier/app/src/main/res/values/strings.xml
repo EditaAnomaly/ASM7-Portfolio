@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Plant Identifier</string>
+
+    <string name="dummy_text">Dummy Text</string>
+    <string name="load_image">Load Image</string>
+    <string name="capture_image">Capture Image</string>
+    <string name="output">Output: </string>
+    <string name="result">Result Here</string>
+    <string name="click_to_search">Click on result to search image on google</string>
+    <string name="default_image">Default Image</string>
+
+</resources>
