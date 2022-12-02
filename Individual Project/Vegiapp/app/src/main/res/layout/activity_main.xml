@@ -43,19 +43,19 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="30dp"
         android:text="Complete"
-        app:layout_constraintBottom_toTopOf="@+id/yoda_head"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/givegem"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/challenge_txt" />
 
 
     <ImageView
-        android:id="@+id/yoda_head"
+        android:id="@+id/givegem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/challenge_txt"
         app:srcCompat="@drawable/yodashoulder" />
@@ -72,7 +72,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/chest_bm"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/yoda_head"></ImageButton>
+        app:layout_constraintTop_toBottomOf="@+id/givegem"></ImageButton>
 
     <ImageButton
         android:id="@+id/chest_bm"
@@ -83,7 +83,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/settings_bm"
         app:layout_constraintStart_toEndOf="@+id/chellenge_bm"
-        app:layout_constraintTop_toBottomOf="@+id/yoda_head"
+        app:layout_constraintTop_toBottomOf="@+id/givegem"
         app:srcCompat="@drawable/treasure_s" />
 
     <ImageButton
@@ -97,7 +97,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/chest_bm"
-        app:layout_constraintTop_toBottomOf="@+id/yoda_head"
+        app:layout_constraintTop_toBottomOf="@+id/givegem"
         app:srcCompat="@drawable/settings_s" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
