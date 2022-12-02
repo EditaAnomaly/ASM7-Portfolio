@@ -2,6 +2,7 @@ package com.example.vegia
 
 import android.Manifest
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
@@ -10,7 +11,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
+import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -24,10 +27,23 @@ class GemMemory : AppCompatActivity() {
     val REQUEST_CODE = 200
     lateinit var picture: ImageView
     var storageRef = Firebase.storage.reference
+    var x = 9
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.gem_memory)
+
+        val challengeNumber = findViewById<TextView>(R.id.challengeNumber)
+        val sharedPreference =  getSharedPreferences("challengeNumber", Context.MODE_PRIVATE)
+        x = sharedPreference.getInt("number", x)
+        challengeNumber.text = "Challenge "+x+" completed!"
+
+        val buttonClick = findViewById<Button>(R.id.continue_btn)
+        buttonClick.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
         if (ContextCompat.checkSelfPermission(this@GemMemory,
                 Manifest.permission.ACCESS_FINE_LOCATION) !==
             PackageManager.PERMISSION_GRANTED) {
@@ -63,13 +79,12 @@ class GemMemory : AppCompatActivity() {
         }
     }
 
-    fun capturePhoto() {
-
+    private fun capturePhoto() {
         val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         startActivityForResult(cameraIntent, REQUEST_CODE)
     }
 
-    fun savePhoto() {
+    private fun savePhoto() {
         picture.isDrawingCacheEnabled = true
         picture.buildDrawingCache()
         val bitmap = (picture.drawable as BitmapDrawable).bitmap
@@ -77,7 +92,6 @@ class GemMemory : AppCompatActivity() {
         bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
         val data = baos.toByteArray()
 
-        var x = 1
         // Create a reference to "challenge_x.jpg"
         val challengeRef = storageRef.child("challenge_"+x+".png")
         // Create a reference to 'images/challenge_x.jpg'
@@ -103,6 +117,11 @@ class GemMemory : AppCompatActivity() {
             picture = findViewById(R.id.picture)
             picture.setImageBitmap(data.extras?.get("data") as Bitmap)
             savePhoto()
+            x++
+            val sharedPreference =  getSharedPreferences("challengeNumber", Context.MODE_PRIVATE)
+            var editor = sharedPreference.edit()
+            editor.putInt("number",x)
+            editor.commit()
         }
     }
 }

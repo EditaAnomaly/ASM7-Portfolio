@@ -8,11 +8,11 @@
     tools:context=".MainActivity" >
 
     <TextView
-        android:id="@+id/challengetitle_txt"
+        android:id="@+id/challengeTitle_txt"
         android:layout_width="250dp"
         android:layout_height="40dp"
         android:layout_marginTop="10dp"
-        android:text="Challenge 1:"
+        android:text="Challenge  Number Here"
         android:textAlignment="center"
         android:textColor="@color/brown"
         android:textSize="22dp"
@@ -26,14 +26,14 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:text="@string/chal1"
+        android:text="challenge text here"
         android:textAlignment="center"
         android:textColor="@color/orange"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/complete_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/challengetitle_txt" />
+        app:layout_constraintTop_toBottomOf="@+id/challengeTitle_txt" />
 
 
     <Button
