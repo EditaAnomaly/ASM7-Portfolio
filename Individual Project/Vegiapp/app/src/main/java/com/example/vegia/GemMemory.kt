@@ -27,11 +27,12 @@ class GemMemory : AppCompatActivity() {
     val REQUEST_CODE = 200
     lateinit var picture: ImageView
     var storageRef = Firebase.storage.reference
-    var x = 9
+    var x = 999
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.gem_memory)
+        supportActionBar?.hide()
 
         val challengeNumber = findViewById<TextView>(R.id.challengeNumber)
         val sharedPreference =  getSharedPreferences("challengeNumber", Context.MODE_PRIVATE)

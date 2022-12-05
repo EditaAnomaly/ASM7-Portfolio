@@ -9,12 +9,12 @@ import androidx.appcompat.app.AppCompatActivity
 import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
-    //getResources().getStringArray(R.array.your_array)[position]
-    var x = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        supportActionBar?.hide()
+        var x = 1
         val challengeNumber = findViewById<TextView>(R.id.challengeTitle_txt)
         val challengeText = findViewById<TextView>(R.id.challenge_txt)
         val challengeList = resources.getStringArray(R.array.challenges)

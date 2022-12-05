@@ -9,6 +9,7 @@ class ReceiveGem : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.receive_gem)
+        supportActionBar?.hide()
 
         val buttonClick = findViewById<Button>(R.id.accept_btn)
         buttonClick.setOnClickListener {
