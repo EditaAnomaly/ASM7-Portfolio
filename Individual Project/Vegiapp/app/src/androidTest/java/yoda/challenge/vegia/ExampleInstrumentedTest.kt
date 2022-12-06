@@ -1,4 +1,4 @@
-package com.example.vegia
+package yoda.challenge.vegia
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

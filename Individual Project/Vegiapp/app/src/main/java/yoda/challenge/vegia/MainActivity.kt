@@ -1,4 +1,4 @@
-package com.example.vegia
+package yoda.challenge.vegia
 
 import android.content.Context
 import android.content.Intent
@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,8 +19,13 @@ class MainActivity : AppCompatActivity() {
         val challengeList = resources.getStringArray(R.array.challenges)
 
         val sharedPreference =  getSharedPreferences("challengeNumber", Context.MODE_PRIVATE)
-        if (sharedPreference.getInt("number",x) == null )
+        if (sharedPreference.getInt("number",x) == null || sharedPreference.getInt("number",x) == 11 )
+        {
             x = 1
+            var editor = sharedPreference.edit()
+            editor.putInt("number",x)
+            editor.commit()
+        }
         else
             x = sharedPreference.getInt("number",x)
 

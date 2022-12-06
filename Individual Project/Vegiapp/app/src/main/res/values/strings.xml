@@ -10,8 +10,21 @@
     <item name="chal5">Tacos today make. Beans and walnuts instead of meat use. Hrmmm.</item>
     <item name="chal6">A pizza today with nutritional yeast instead of cheese we will make. A vegan pizza dough you can use, if you must. Yes, hrrmmm.</item>
     <item name="chal7">For this challenge, sushi you will make. Fried eggplant or zucchini instead of salmon you will use. Yes.</item>
-    <item name="chal8">Hrrmmm. Challenging this one is. Make a mezze platter you must. Hummus form scratch you will make. Yes. Various vegetables you can use. Hrrmmm.</item>
+    <item name="chal8">Hrrmmm. Challenging this one is. Make a mezze platter you must. Hummus from scratch you will make. Yes. Various vegetables you can use. Hrrmmm.</item>
     <item name="chal9">Wraps today will be. You will fill them with falafels and vegetables. Vegan wraps you must buy and on falafel recipe decide.</item>
     <item name="chal10">Pasta pesto you will make. Pick the type of pasta you can, but pesto yourself must make. Cashews and herbs use. Yes, hrrmmm.</item>
+    </string-array>
+
+    <string-array name="tips">
+        <item name="tip1">Hrrmmm. Adding flour or oats can help the burger together stick.</item>
+        <item name="tip2">Turmeric and paprika powders the yolk-like color can create. Yes.</item>
+        <item name="tip3">If the flax egg too watery is, it stand for 5-10 minutes you should let.</item>
+        <item name="tip4">Thin, see-through, all-tapioca papers you avoid. Easily they tear.</item>
+        <item name="tip5">All the difference mushrooms and herbs make. Hrmm.</item>
+        <item name="tip6">Nutritional yeast provides nine amino acids that your body can not make. Hmm.</item>
+        <item name="tip7">Wasabi a better taste will give.</item>
+        <item name="tip8">Nuts and berries more vitamins will provide. Hrmmm.</item>
+        <item name="tip9">It together a binding ingredient can help keep. Hrmmm.</item>
+        <item name="tip10">Nutritional yeast a parmesan can replace. Hrmmm.</item>
     </string-array>
 </resources>

@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "777476834424",
+    "firebase_url": "https://vegi-67484-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "vegi-67484",
     "storage_bucket": "vegi-67484.appspot.com"
   },
@@ -10,6 +11,35 @@
         "mobilesdk_app_id": "1:777476834424:android:f22e73102dde2ca9e7198d",
         "android_client_info": {
           "package_name": "com.example.vegia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "777476834424-u5gegfffjntj7fr381u5m8j4lr2n3joa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEdbOrzfnhGy2PtAfORt42lhE6STjc7dQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "777476834424-u5gegfffjntj7fr381u5m8j4lr2n3joa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:777476834424:android:940e9cf59853d27be7198d",
+        "android_client_info": {
+          "package_name": "yoda.challenge.vegia"
         }
       },
       "oauth_client": [

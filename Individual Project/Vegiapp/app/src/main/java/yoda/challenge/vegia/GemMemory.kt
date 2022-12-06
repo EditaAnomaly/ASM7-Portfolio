@@ -1,4 +1,4 @@
-package com.example.vegia
+package yoda.challenge.vegia
 
 import android.Manifest
 import android.app.Activity
@@ -20,14 +20,13 @@ import androidx.core.content.ContextCompat
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.ktx.storage
 import java.io.ByteArrayOutputStream
-import kotlin.math.log
 
 class GemMemory : AppCompatActivity() {
 
     val REQUEST_CODE = 200
     lateinit var picture: ImageView
     var storageRef = Firebase.storage.reference
-    var x = 999
+    var x = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

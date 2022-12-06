@@ -1,4 +1,4 @@
-package com.example.vegia
+package yoda.challenge.vegia
 
 import org.junit.Test
 
