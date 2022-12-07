@@ -12,7 +12,7 @@
         android:layout_width="250dp"
         android:layout_height="40dp"
         android:layout_marginTop="10dp"
-        android:text="Challenge  Number Here"
+        android:text="Challenge Number Here"
         android:textAlignment="center"
         android:textColor="@color/brown"
         android:textSize="22sp"
@@ -41,10 +41,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="40dp"
         android:text="Complete"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/givegem"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/challenge_txt" />
@@ -54,11 +54,11 @@
         android:id="@+id/givegem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="-80dp"
         app:layout_constraintBottom_toTopOf="@+id/chellenge_bm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/complete_btn"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:srcCompat="@drawable/yodashoulder" />
 
     <ImageButton
@@ -66,6 +66,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
+        android:layout_marginTop="-20dp"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="10dp"
         android:background="#E6EDD7"
@@ -73,12 +74,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/chest_bm"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/givegem"/>
+        app:layout_constraintTop_toBottomOf="@+id/givegem" />
 
     <ImageButton
         android:id="@+id/chest_bm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="-20dp"
         android:layout_marginBottom="10dp"
         android:background="#E6EDD7"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -92,6 +94,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
+        android:layout_marginTop="-20dp"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="10dp"
         android:background="#E6EDD7"
@@ -100,5 +103,17 @@
         app:layout_constraintStart_toEndOf="@+id/chest_bm"
         app:layout_constraintTop_toBottomOf="@+id/givegem"
         app:srcCompat="@drawable/settings_s" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="280dp"
+        app:layout_constraintBottom_toTopOf="@+id/givegem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/complete_btn"
+        app:srcCompat="@drawable/tip" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,6 +15,13 @@
         android:theme="@style/Theme.Vegia"
         tools:targetApi="31">
         <activity
+            android:name=".GemChest"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".GemMemory"
             android:exported="false">
             <meta-data
