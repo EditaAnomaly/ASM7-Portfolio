@@ -38,9 +38,9 @@ class GemMemory : AppCompatActivity() {
         x = sharedPreference.getInt("number", x)
         challengeNumber.text = "Challenge "+x+" completed!"
 
-        val buttonClick = findViewById<Button>(R.id.continue_btn)
-        buttonClick.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+        val continueButton = findViewById<Button>(R.id.continue_btn)
+        continueButton.setOnClickListener {
+            val intent = Intent(this, ReceiveGem::class.java)
             startActivity(intent)
         }
 

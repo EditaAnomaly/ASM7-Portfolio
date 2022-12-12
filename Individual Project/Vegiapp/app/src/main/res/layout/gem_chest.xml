@@ -7,48 +7,6 @@
     android:background="@color/palegreen"
     tools:context=".GemChest">
 
-    <ImageButton
-        android:id="@+id/chellenge_bm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="10dp"
-        android:background="#E6EDD7"
-        android:src="@drawable/quest_s"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/chest_bm"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gem10_iv" />
-
-    <ImageButton
-        android:id="@+id/chest_bm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
-        android:background="#E6EDD7"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/settings_bm"
-        app:layout_constraintStart_toEndOf="@+id/chellenge_bm"
-        app:layout_constraintTop_toBottomOf="@+id/gem10_iv"
-        app:srcCompat="@drawable/treasure_s" />
-
-    <ImageButton
-        android:id="@+id/settings_bm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="10dp"
-        android:background="#E6EDD7"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/chest_bm"
-        app:layout_constraintTop_toBottomOf="@+id/gem10_iv"
-        app:srcCompat="@drawable/settings_s" />
 
     <ImageView
         android:id="@+id/gem1_iv"
@@ -125,9 +83,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="20dp"
         android:layout_marginEnd="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/chest_bm"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gem8_iv"
@@ -140,7 +97,7 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="5dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="30dp"
         app:layout_constraintBottom_toTopOf="@+id/gem5_iv"
         app:layout_constraintEnd_toStartOf="@+id/gem3_iv"
         app:layout_constraintStart_toEndOf="@+id/gem1_iv"
@@ -152,7 +109,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="13dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/gem8_iv"

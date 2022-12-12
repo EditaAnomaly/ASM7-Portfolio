@@ -23,7 +23,7 @@ class ReceiveGem : AppCompatActivity() {
 
         val buttonClick = findViewById<Button>(R.id.accept_btn)
         buttonClick.setOnClickListener {
-            val intent = Intent(this, GemMemory::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }

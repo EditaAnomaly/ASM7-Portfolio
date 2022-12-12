@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/challenge"
+        android:icon="@drawable/quest_s"
+        android:title="Challenge" />
+    <item
+        android:id="@+id/gem_chest"
+        android:icon="@drawable/treasure_s"
+        android:title="Chest" />
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/settings_s"
+        android:title="Settings" />
+
+</menu>
