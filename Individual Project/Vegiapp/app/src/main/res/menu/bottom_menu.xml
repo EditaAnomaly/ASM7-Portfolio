@@ -3,11 +3,11 @@
 
     <item
         android:id="@+id/challenge"
-        android:icon="@drawable/quest_s"
+        android:icon="@drawable/trophy_s"
         android:title="Challenge" />
     <item
         android:id="@+id/gem_chest"
-        android:icon="@drawable/treasure_s"
+        android:icon="@drawable/gem_chest_s"
         android:title="Chest" />
     <item
         android:id="@+id/settings"

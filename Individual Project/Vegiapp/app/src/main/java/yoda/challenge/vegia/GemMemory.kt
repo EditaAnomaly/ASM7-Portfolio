@@ -117,11 +117,6 @@ class GemMemory : AppCompatActivity() {
             picture = findViewById(R.id.picture)
             picture.setImageBitmap(data.extras?.get("data") as Bitmap)
             savePhoto()
-            x++
-            val sharedPreference =  getSharedPreferences("challengeNumber", Context.MODE_PRIVATE)
-            var editor = sharedPreference.edit()
-            editor.putInt("number",x)
-            editor.commit()
         }
     }
 }

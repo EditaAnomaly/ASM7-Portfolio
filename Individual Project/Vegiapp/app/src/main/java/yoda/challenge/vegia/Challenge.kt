@@ -54,7 +54,7 @@ class Challenge : Fragment() {
         }
 
         binding.tip.setOnClickListener {
-            if (tipText == false){
+            if (!tipText){
                 tip_text.setText(tipsList[x - 1])
                 tipText = true
             }

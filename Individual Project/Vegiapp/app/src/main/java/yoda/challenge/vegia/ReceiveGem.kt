@@ -16,10 +16,13 @@ class ReceiveGem : AppCompatActivity() {
         var gem = findViewById<ImageView>(R.id.givegem)
         val gems = listOf(R.drawable.chal1, R.drawable.chal2, R.drawable.chal3, R.drawable.chal4, R.drawable.chal5, R.drawable.chal6, R.drawable.chal7, R.drawable.chal8, R.drawable.chal9, R.drawable.chal10)
 
-
         val sharedPreference =  getSharedPreferences("challengeNumber", Context.MODE_PRIVATE)
-        val x = sharedPreference.getInt("number", x)
+        var x = sharedPreference.getInt("number", x)
         gem.setImageResource(gems[x-1])
+        x++
+        var editor = sharedPreference.edit()
+        editor.putInt("number",x)
+        editor.commit()
 
         val buttonClick = findViewById<Button>(R.id.accept_btn)
         buttonClick.setOnClickListener {

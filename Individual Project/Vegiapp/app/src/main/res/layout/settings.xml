@@ -24,32 +24,46 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="20dp"
-        android:text="Sounds"
+        android:text="Sounds        "
+        android:textColor="@color/orange"
         android:textSize="16sp"
-        android:thumbTint="@color/orange"
+        android:thumbTint="@color/brown"
         app:layout_constraintBottom_toTopOf="@+id/vibration_switch"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/settings_title" />
+        app:layout_constraintTop_toBottomOf="@+id/settings_title"
+        app:trackTint="@color/orange" />
 
     <Switch
         android:id="@+id/vibration_switch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="20dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="300dp"
-        android:text="Vibrations"
+        android:layout_marginBottom="20dp"
+        android:text="Vibrations    "
+        android:textColor="@color/orange"
         android:textSize="16sp"
-        android:thumbTint="@color/orange"
+        android:thumbTint="@color/brown"
+        app:layout_constraintBottom_toTopOf="@id/animationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sound_switch"
+        app:trackTint="@color/orange" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        app:lottie_rawRes="@raw/bb8"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sound_switch" />
-
+        app:layout_constraintTop_toBottomOf="@+id/vibration_switch"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
