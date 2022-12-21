@@ -2,69 +2,70 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/palegreen">
+    android:background="@color/palegreen"
+    tools:context=".Verification">
 
-    <TextView
-        android:id="@+id/settings_title"
+    <EditText
+        android:id="@+id/username_field"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Settings"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="50dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
         android:textAlignment="center"
         android:textColor="@color/brown"
         android:textSize="22sp"
-        app:layout_constraintBottom_toTopOf="@+id/sound_switch"
+        app:layout_constraintBottom_toTopOf="@+id/confirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_explanation" />
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="30dp"
+        android:text="Confirm"
+        app:layout_constraintBottom_toBottomOf="@+id/animationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username_field" />
+
+    <TextView
+        android:id="@+id/login_explanation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="183dp"
+        android:layout_marginBottom="20dp"
+        android:text="Please input your name below:"
+        android:textAlignment="center"
+        android:textColor="@color/orange"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/username_field"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Switch
-        android:id="@+id/sound_switch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="20dp"
-        android:text="Sounds        "
-        android:textColor="@color/orange"
-        android:textSize="16sp"
-        android:thumbTint="@color/brown"
-        app:layout_constraintBottom_toTopOf="@+id/vibration_switch"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/settings_title"
-        app:trackTint="@color/orange" />
-
-    <Switch
-        android:id="@+id/vibration_switch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="20dp"
-        android:text="Vibrations    "
-        android:textColor="@color/orange"
-        android:textSize="16sp"
-        android:thumbTint="@color/brown"
-        app:layout_constraintBottom_toTopOf="@id/animationView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sound_switch"
-        app:trackTint="@color/orange" />
-
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animationView"
         android:layout_width="300dp"
-        android:layout_height="500dp"
-        app:lottie_rawRes="@raw/bb8"
+        android:layout_height="400dp"
+        app:lottie_rawRes="@raw/grogu"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vibration_switch"/>
+        app:layout_constraintTop_toBottomOf="@+id/confirm"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

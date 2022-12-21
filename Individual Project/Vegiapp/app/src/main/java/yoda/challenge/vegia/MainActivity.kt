@@ -1,6 +1,8 @@
 package yoda.challenge.vegia
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
@@ -14,10 +16,19 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        supportActionBar?.hide()
-        navController = Navigation.findNavController(this, R.id.navHostFragment)
-        setupWithNavController(binding.bottomNavigationView, navController)
+        val name = ""
+        val sharedPreference = getSharedPreferences("userSettings", Context.MODE_PRIVATE)
+        Log.d("username", (sharedPreference.getString("user", name).toString()))
+        if (sharedPreference.getString("user", name) == null || (sharedPreference.getString("user", name) == "")){
+            supportActionBar?.hide()
+            setContentView(R.layout.verification)
+            }
+        else {
+            binding = ActivityMainBinding.inflate(layoutInflater)
+            setContentView(binding.root)
+            supportActionBar?.hide()
+            navController = Navigation.findNavController(this, R.id.navHostFragment)
+            setupWithNavController(binding.bottomNavigationView, navController)
+        }
     }
 }
