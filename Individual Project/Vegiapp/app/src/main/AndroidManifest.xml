@@ -23,6 +23,13 @@
         android:theme="@style/Theme.Vegia"
         tools:targetApi="31">
         <activity
+            android:name=".user_verification"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Verification"
             android:exported="false">
             <meta-data

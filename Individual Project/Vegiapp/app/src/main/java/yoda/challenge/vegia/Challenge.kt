@@ -50,13 +50,10 @@ class Challenge : Fragment() {
 
         val sharedPreference =
             appContext.getSharedPreferences("userSettings", Context.MODE_PRIVATE)
-        if (sharedPreference.getInt("number", x) == null || sharedPreference.getInt(
-                "number",
-                x
-            ) == 11
-        ) {
+        x = sharedPreference.getInt("number", x)
+        if ( x == null || x == 11 ) {
             x = 1
-            var editor = sharedPreference.edit()
+            val editor = sharedPreference.edit()
             editor.putInt("number", x)
             editor.commit()
         } else

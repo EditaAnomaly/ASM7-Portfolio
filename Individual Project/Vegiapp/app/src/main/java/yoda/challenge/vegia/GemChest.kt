@@ -33,13 +33,13 @@ class GemChest : Fragment() {
         var soundPool: SoundPool? = null
         var gemPing = 1
         var x = 0
+        var name = "Grogu"
 
         val appContext = requireContext().applicationContext
         val sharedPreference =
             appContext.getSharedPreferences("userSettings", Context.MODE_PRIVATE)
         x = sharedPreference.getInt("number", x) - 1
-        Log.d("X", sharedPreference.getInt("number", x).toString())
-
+        name = sharedPreference.getString("user", name).toString()
         soundPool = SoundPool(6, AudioManager.STREAM_MUSIC, 0)
         gemPing = soundPool!!.load(appContext,R.raw.gem, 1)
 
@@ -53,131 +53,131 @@ class GemChest : Fragment() {
         when (x) {
             1 -> {
                 gem1_iv.setImageResource(R.drawable.chal1)
-                gemClick(gem1_iv, 1, isSoundOn,soundPool, gemPing)
+                gemClick(gem1_iv, 1,name, isSoundOn,soundPool, gemPing)
             }
             2 -> {
                 gem1_iv.setImageResource(R.drawable.chal1)
-                gemClick(gem1_iv, 1, isSoundOn,soundPool, gemPing)
+                gemClick(gem1_iv, 1, name, isSoundOn,soundPool, gemPing)
                 gem2_iv.setImageResource(R.drawable.chal2)
-                gemClick(gem2_iv, 2, isSoundOn,soundPool, gemPing)
+                gemClick(gem2_iv, 2, name,isSoundOn,soundPool, gemPing)
             }
             3 -> {
                 gem1_iv.setImageResource(R.drawable.chal1)
-                gemClick(gem1_iv, 1, isSoundOn,soundPool, gemPing)
+                gemClick(gem1_iv, 1, name, isSoundOn,soundPool, gemPing)
                 gem2_iv.setImageResource(R.drawable.chal2)
-                gemClick(gem2_iv, 2, isSoundOn,soundPool, gemPing)
+                gemClick(gem2_iv, 2, name, isSoundOn,soundPool, gemPing)
                 gem3_iv.setImageResource(R.drawable.chal3)
-                gemClick(gem3_iv, 3, isSoundOn,soundPool, gemPing)
+                gemClick(gem3_iv, 3, name, isSoundOn,soundPool, gemPing)
             }
             4 -> {
                 gem1_iv.setImageResource(R.drawable.chal1)
-                gemClick(gem1_iv, 1, isSoundOn,soundPool, gemPing)
+                gemClick(gem1_iv, 1, name, isSoundOn,soundPool, gemPing)
                 gem2_iv.setImageResource(R.drawable.chal2)
-                gemClick(gem2_iv, 2, isSoundOn,soundPool, gemPing)
+                gemClick(gem2_iv, 2, name, isSoundOn,soundPool, gemPing)
                 gem3_iv.setImageResource(R.drawable.chal3)
-                gemClick(gem3_iv, 3, isSoundOn,soundPool, gemPing)
+                gemClick(gem3_iv, 3, name, isSoundOn,soundPool, gemPing)
                 gem4_iv.setImageResource(R.drawable.chal4)
-                gemClick(gem4_iv, 4, isSoundOn,soundPool, gemPing)
+                gemClick(gem4_iv, 4, name, isSoundOn,soundPool, gemPing)
             }
             5 -> {
                 gem1_iv.setImageResource(R.drawable.chal1)
-                gemClick(gem1_iv, 1, isSoundOn,soundPool, gemPing)
+                gemClick(gem1_iv, 1, name, isSoundOn,soundPool, gemPing)
                 gem2_iv.setImageResource(R.drawable.chal2)
-                gemClick(gem2_iv, 2, isSoundOn,soundPool, gemPing)
+                gemClick(gem2_iv, 2, name, isSoundOn,soundPool, gemPing)
                 gem3_iv.setImageResource(R.drawable.chal3)
-                gemClick(gem3_iv, 3, isSoundOn,soundPool, gemPing)
+                gemClick(gem3_iv, 3, name, isSoundOn,soundPool, gemPing)
                 gem4_iv.setImageResource(R.drawable.chal4)
-                gemClick(gem4_iv, 4, isSoundOn,soundPool, gemPing)
+                gemClick(gem4_iv, 4, name, isSoundOn,soundPool, gemPing)
                 gem5_iv.setImageResource(R.drawable.chal5)
-                gemClick(gem5_iv, 5, isSoundOn,soundPool, gemPing)
+                gemClick(gem5_iv, 5, name, isSoundOn,soundPool, gemPing)
             }
             6 -> {
                 gem1_iv.setImageResource(R.drawable.chal1)
-                gemClick(gem1_iv, 1, isSoundOn,soundPool, gemPing)
+                gemClick(gem1_iv, 1, name, isSoundOn,soundPool, gemPing)
                 gem2_iv.setImageResource(R.drawable.chal2)
-                gemClick(gem2_iv, 2, isSoundOn,soundPool, gemPing)
+                gemClick(gem2_iv, 2, name, isSoundOn,soundPool, gemPing)
                 gem3_iv.setImageResource(R.drawable.chal3)
-                gemClick(gem3_iv, 3, isSoundOn,soundPool, gemPing)
+                gemClick(gem3_iv, 3, name, isSoundOn,soundPool, gemPing)
                 gem4_iv.setImageResource(R.drawable.chal4)
-                gemClick(gem4_iv, 4, isSoundOn,soundPool, gemPing)
+                gemClick(gem4_iv, 4, name, isSoundOn,soundPool, gemPing)
                 gem5_iv.setImageResource(R.drawable.chal5)
-                gemClick(gem5_iv, 5, isSoundOn,soundPool, gemPing)
+                gemClick(gem5_iv, 5, name, isSoundOn,soundPool, gemPing)
                 gem6_iv.setImageResource(R.drawable.chal6)
-                gemClick(gem6_iv, 6, isSoundOn,soundPool, gemPing)
+                gemClick(gem6_iv, 6, name, isSoundOn,soundPool, gemPing)
             }
             7 -> {
                 gem1_iv.setImageResource(R.drawable.chal1)
-                gemClick(gem1_iv, 1, isSoundOn,soundPool, gemPing)
+                gemClick(gem1_iv, 1, name, isSoundOn,soundPool, gemPing)
                 gem2_iv.setImageResource(R.drawable.chal2)
-                gemClick(gem2_iv, 2, isSoundOn,soundPool, gemPing)
+                gemClick(gem2_iv, 2, name, isSoundOn,soundPool, gemPing)
                 gem3_iv.setImageResource(R.drawable.chal3)
-                gemClick(gem3_iv, 3, isSoundOn,soundPool, gemPing)
+                gemClick(gem3_iv, 3, name, isSoundOn,soundPool, gemPing)
                 gem4_iv.setImageResource(R.drawable.chal4)
-                gemClick(gem4_iv, 4, isSoundOn,soundPool, gemPing)
+                gemClick(gem4_iv, 4, name, isSoundOn,soundPool, gemPing)
                 gem5_iv.setImageResource(R.drawable.chal5)
-                gemClick(gem5_iv, 5, isSoundOn,soundPool, gemPing)
+                gemClick(gem5_iv, 5, name, isSoundOn,soundPool, gemPing)
                 gem6_iv.setImageResource(R.drawable.chal6)
-                gemClick(gem6_iv, 6, isSoundOn,soundPool, gemPing)
+                gemClick(gem6_iv, 6, name, isSoundOn,soundPool, gemPing)
                 gem7_iv.setImageResource(R.drawable.chal7)
-                gemClick(gem7_iv, 7, isSoundOn,soundPool, gemPing)
+                gemClick(gem7_iv, 7, name, isSoundOn,soundPool, gemPing)
             }
             8 -> {
                 gem1_iv.setImageResource(R.drawable.chal1)
-                gemClick(gem1_iv, 1, isSoundOn,soundPool, gemPing)
+                gemClick(gem1_iv, 1, name, isSoundOn,soundPool, gemPing)
                 gem2_iv.setImageResource(R.drawable.chal2)
-                gemClick(gem2_iv, 2, isSoundOn,soundPool, gemPing)
+                gemClick(gem2_iv, 2, name, isSoundOn,soundPool, gemPing)
                 gem3_iv.setImageResource(R.drawable.chal3)
-                gemClick(gem3_iv, 3, isSoundOn,soundPool, gemPing)
+                gemClick(gem3_iv, 3, name, isSoundOn,soundPool, gemPing)
                 gem4_iv.setImageResource(R.drawable.chal4)
-                gemClick(gem4_iv, 4, isSoundOn,soundPool, gemPing)
+                gemClick(gem4_iv, 4, name, isSoundOn,soundPool, gemPing)
                 gem5_iv.setImageResource(R.drawable.chal5)
-                gemClick(gem5_iv, 5, isSoundOn,soundPool, gemPing)
+                gemClick(gem5_iv, 5, name, isSoundOn,soundPool, gemPing)
                 gem6_iv.setImageResource(R.drawable.chal6)
-                gemClick(gem6_iv, 6, isSoundOn,soundPool, gemPing)
+                gemClick(gem6_iv, 6, name, isSoundOn,soundPool, gemPing)
                 gem7_iv.setImageResource(R.drawable.chal7)
-                gemClick(gem7_iv, 7, isSoundOn,soundPool, gemPing)
+                gemClick(gem7_iv, 7, name, isSoundOn,soundPool, gemPing)
                 gem8_iv.setImageResource(R.drawable.chal8)
-                gemClick(gem8_iv, 8, isSoundOn,soundPool, gemPing)
+                gemClick(gem8_iv, 8, name, isSoundOn,soundPool, gemPing)
             }
             9 -> {
                 gem1_iv.setImageResource(R.drawable.chal1)
-                gemClick(gem1_iv, 1, isSoundOn,soundPool, gemPing)
+                gemClick(gem1_iv, 1, name, isSoundOn,soundPool, gemPing)
                 gem2_iv.setImageResource(R.drawable.chal2)
-                gemClick(gem2_iv, 2, isSoundOn,soundPool, gemPing)
+                gemClick(gem2_iv, 2, name, isSoundOn,soundPool, gemPing)
                 gem3_iv.setImageResource(R.drawable.chal3)
-                gemClick(gem3_iv, 3, isSoundOn,soundPool, gemPing)
+                gemClick(gem3_iv, 3, name, isSoundOn,soundPool, gemPing)
                 gem4_iv.setImageResource(R.drawable.chal4)
-                gemClick(gem4_iv, 4, isSoundOn,soundPool, gemPing)
+                gemClick(gem4_iv, 4, name, isSoundOn,soundPool, gemPing)
                 gem5_iv.setImageResource(R.drawable.chal5)
-                gemClick(gem5_iv, 5, isSoundOn,soundPool, gemPing)
+                gemClick(gem5_iv, 5, name, isSoundOn,soundPool, gemPing)
                 gem6_iv.setImageResource(R.drawable.chal6)
-                gemClick(gem6_iv, 6, isSoundOn,soundPool, gemPing)
+                gemClick(gem6_iv, 6, name, isSoundOn,soundPool, gemPing)
                 gem7_iv.setImageResource(R.drawable.chal7)
-                gemClick(gem7_iv, 7, isSoundOn,soundPool, gemPing)
+                gemClick(gem7_iv, 7, name, isSoundOn,soundPool, gemPing)
                 gem8_iv.setImageResource(R.drawable.chal8)
-                gemClick(gem8_iv, 8, isSoundOn,soundPool, gemPing)
+                gemClick(gem8_iv, 8, name, isSoundOn,soundPool, gemPing)
                 gem9_iv.setImageResource(R.drawable.chal9)
-                gemClick(gem9_iv, 9, isSoundOn,soundPool, gemPing)
+                gemClick(gem9_iv, 9, name, isSoundOn,soundPool, gemPing)
             }
             10 -> {
                 gem1_iv.setImageResource(R.drawable.chal1)
-                gemClick(gem1_iv, 1, isSoundOn,soundPool, gemPing)
+                gemClick(gem1_iv, 1, name, isSoundOn,soundPool, gemPing)
                 gem2_iv.setImageResource(R.drawable.chal2)
-                gemClick(gem2_iv, 2, isSoundOn,soundPool, gemPing)
+                gemClick(gem2_iv, 2, name, isSoundOn,soundPool, gemPing)
                 gem3_iv.setImageResource(R.drawable.chal3)
-                gemClick(gem3_iv, 3, isSoundOn,soundPool, gemPing)
+                gemClick(gem3_iv, 3, name, isSoundOn,soundPool, gemPing)
                 gem4_iv.setImageResource(R.drawable.chal4)
-                gemClick(gem4_iv, 4, isSoundOn,soundPool, gemPing)
+                gemClick(gem4_iv, 4, name, isSoundOn,soundPool, gemPing)
                 gem5_iv.setImageResource(R.drawable.chal5)
-                gemClick(gem5_iv, 5, isSoundOn,soundPool, gemPing)
+                gemClick(gem5_iv, 5, name, isSoundOn,soundPool, gemPing)
                 gem6_iv.setImageResource(R.drawable.chal6)
-                gemClick(gem6_iv, 6, isSoundOn,soundPool, gemPing)
+                gemClick(gem6_iv, 6, name, isSoundOn,soundPool, gemPing)
                 gem7_iv.setImageResource(R.drawable.chal7)
-                gemClick(gem7_iv, 7, isSoundOn,soundPool, gemPing)
+                gemClick(gem7_iv, 7, name, isSoundOn,soundPool, gemPing)
                 gem8_iv.setImageResource(R.drawable.chal8)
-                gemClick(gem8_iv, 8, isSoundOn,soundPool, gemPing)
+                gemClick(gem8_iv, 8, name, isSoundOn,soundPool, gemPing)
                 gem9_iv.setImageResource(R.drawable.chal9)
-                gemClick(gem9_iv, 9, isSoundOn,soundPool, gemPing)
+                gemClick(gem9_iv, 9, name, isSoundOn,soundPool, gemPing)
                 gem10_iv.setImageResource(R.drawable.chal10)
             }
         }
@@ -187,7 +187,7 @@ class GemChest : Fragment() {
         }
     }
 
-    private fun gemClick(imageView: ImageView, x: Int, isSoundOn: Boolean, soundPool: SoundPool, gemPing: Int) {
+    private fun gemClick(imageView: ImageView, x: Int, name: String, isSoundOn: Boolean, soundPool: SoundPool, gemPing: Int) {
         imageView.setOnClickListener {
 
             if (isSoundOn){
@@ -195,7 +195,7 @@ class GemChest : Fragment() {
             }
             val memoryLocation = gem_memory
             val imageRef =
-                FirebaseStorage.getInstance().reference.child("challenge_" + x + ".png")
+                FirebaseStorage.getInstance().reference.child(name).child("challenge_" + x + ".png")
             val localFile = File.createTempFile("TempImage", "jpg")
             imageRef.getFile(localFile).addOnSuccessListener {
                 val bitmap = BitmapFactory.decodeFile(localFile.absolutePath)

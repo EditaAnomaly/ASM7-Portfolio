@@ -38,6 +38,7 @@ class GemMemory : AppCompatActivity() {
     var storageRef = Firebase.storage.reference
     //lateinit var currentPhotoPath: String
     var x = 1
+    var name = "Grogu"
 
     //variables for sound effects
     var soundPool: SoundPool? = null
@@ -53,6 +54,7 @@ class GemMemory : AppCompatActivity() {
 
         val challengeNumber = findViewById<TextView>(R.id.challengeNumber)
         val sharedPreference =  getSharedPreferences("userSettings", Context.MODE_PRIVATE)
+        name =sharedPreference.getString("user", name).toString()
         x = sharedPreference.getInt("number", x)
         challengeNumber.text = "Challenge "+x+" completed!"
 
@@ -158,9 +160,9 @@ class GemMemory : AppCompatActivity() {
         val data = baos.toByteArray()
 
         // Create a reference to "challenge_x.jpg"
-        val challengeRef = storageRef.child("challenge_"+x+".png")
+        val challengeRef = storageRef.child(name+"/challenge_"+x+".png")
         // Create a reference to 'images/challenge_x.jpg'
-        val challengeImagesRef = storageRef.child("images/challenge_"+x+".jpg")
+        val challengeImagesRef = storageRef.child(name+"/challenge_"+x+".jpg")
         // While the file names are the same, the references point to different files
         challengeRef.name == challengeImagesRef.name // true
         challengeRef.path == challengeImagesRef.path // false
